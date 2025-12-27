@@ -1,71 +1,131 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <title>Erste deutsche Tombola</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: radial-gradient(circle at top, #1a1f2b, #05060a);
-      font-family: Arial, Helvetica, sans-serif;
-      color: #ffffff;
-      text-align: center;
-    }
-    .card {
-      padding: 50px;
-      max-width: 640px;
-      background: rgba(255,255,255,0.05);
-      border-radius: 20px;
-      box-shadow: 0 0 40px rgba(0,0,0,0.6);
-      transition: transform 0.3s ease;
-    }
-    .card:hover {
-      transform: translateY(-10px);
-    }
-    h1 {
-      font-size: 2.6rem;
-      margin-bottom: 20px;
-    }
-    p {
-      font-size: 1.2rem;
-      line-height: 1.6;
-      opacity: 0.9;
-    }
-    .tagline {
-      margin-top: 30px;
-      font-style: italic;
-      opacity: 0.6;
-    }
-    .button {
-      margin-top: 30px;
-      padding: 15px 30px;
-      background: #ff6b6b;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 10px;
-      font-weight: bold;
-      transition: background 0.3s ease;
-    }
-    .button:hover {
-      background: #ff3b3b;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Erste deutsche Tombola</title>
+<style>
+  /* Grundlayout */
+  body {
+    margin:0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1a1f2b, #05060a);
+    color:#fff;
+  }
+
+  header {
+    text-align:center;
+    padding:50px 20px 20px 20px;
+  }
+  header h1 {
+    font-size:3rem;
+    margin-bottom:10px;
+    letter-spacing:1px;
+  }
+  header p {
+    font-size:1.2rem;
+    opacity:0.8;
+  }
+
+  /* Galerie */
+  .gallery-container {
+    display:flex;
+    overflow-x:auto;
+    padding:30px;
+    gap:20px;
+  }
+  .gallery-container::-webkit-scrollbar { height:8px; }
+  .gallery-container::-webkit-scrollbar-thumb { background:#ff6b6b; border-radius:4px; }
+
+  .card {
+    flex:0 0 auto;
+    width:250px;
+    background:rgba(255,255,255,0.05);
+    border-radius:15px;
+    box-shadow:0 0 20px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow:0 0 30px rgba(255,107,107,0.7);
+  }
+  .card img {
+    width:100%;
+    border-top-left-radius:15px;
+    border-top-right-radius:15px;
+  }
+  .card h3 {
+    margin:15px;
+    font-size:1.2rem;
+  }
+  .card p {
+    margin:0 15px 15px 15px;
+    font-size:0.95rem;
+    opacity:0.8;
+  }
+
+  /* Button */
+  .buy-button {
+    display:block;
+    margin:40px auto;
+    padding:15px 40px;
+    background:#ff6b6b;
+    color:#fff;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:10px;
+    transition: background 0.3s ease;
+  }
+  .buy-button:hover {
+    background:#ff3b3b;
+  }
+
+  /* Footer */
+  footer {
+    text-align:center;
+    padding:20px;
+    opacity:0.5;
+    font-size:0.9rem;
+  }
+
+</style>
 </head>
 <body>
+
+<header>
+  <h1>Erste deutsche Tombola</h1>
+  <p>Entdecke unsere Preise und sichere dir dein Los!</p>
+</header>
+
+<!-- Galerie -->
+<div class="gallery-container">
   <div class="card">
-    <h1>Erste deutsche Tombola</h1>
-    <p>
-      Nicht Glück. Entscheidung.<br>
-      Dies ist kein Versprechen.<br>
-      Es ist eine Teilnahme.
-    </p>
-    <a href="#" class="button">Jetzt Los kaufen</a>
-    <div class="tagline">Der Moment entsteht bald.</div>
+    <img src="https://via.placeholder.com/250x150?text=Preis+1" alt="Preis 1">
+    <h3>Preis 1</h3>
+    <p>Beschreibung vom ersten Preis</p>
   </div>
+  <div class="card">
+    <img src="https://via.placeholder.com/250x150?text=Preis+2" alt="Preis 2">
+    <h3>Preis 2</h3>
+    <p>Beschreibung vom zweiten Preis</p>
+  </div>
+  <div class="card">
+    <img src="https://via.placeholder.com/250x150?text=Preis+3" alt="Preis 3">
+    <h3>Preis 3</h3>
+    <p>Beschreibung vom dritten Preis</p>
+  </div>
+  <div class="card">
+    <img src="https://via.placeholder.com/250x150?text=Preis+4" alt="Preis 4">
+    <h3>Preis 4</h3>
+    <p>Beschreibung vom vierten Preis</p>
+  </div>
+</div>
+
+<a href="#" class="buy-button">Jetzt Los kaufen</a>
+
+<footer>
+  &copy; 2025 Erste deutsche Tombola
+</footer>
+
 </body>
 </html>
