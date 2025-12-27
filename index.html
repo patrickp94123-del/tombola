@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Erste deutsche Tombola</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: radial-gradient(circle at top, #1a1f2b, #05060a);
+      font-family: Arial, Helvetica, sans-serif;
+      color: #ffffff;
+      text-align: center;
+    }
+    .card {
+      padding: 50px;
+      max-width: 640px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 20px;
+      box-shadow: 0 0 40px rgba(0,0,0,0.6);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+    }
+    h1 {
+      font-size: 2.6rem;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      opacity: 0.9;
+    }
+    .tagline {
+      margin-top: 30px;
+      font-style: italic;
+      opacity: 0.6;
+    }
+    .button {
+      margin-top: 30px;
+      padding: 15px 30px;
+      background: #ff6b6b;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    .button:hover {
+      background: #ff3b3b;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Erste deutsche Tombola</h1>
+    <p>
+      Nicht Glück. Entscheidung.<br>
+      Dies ist kein Versprechen.<br>
+      Es ist eine Teilnahme.
+    </p>
+    <a href="#" class="button">Jetzt Los kaufen</a>
+    <div class="tagline">Der Moment entsteht bald.</div>
+  </div>
+</body>
+</html>
